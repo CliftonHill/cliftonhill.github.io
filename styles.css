@@ -1,3 +1,11 @@
+/* TO DO:
+Google font for title of page + section headers for h3.
+Try jquery for a gradient font on title h1
+setup bootstrap to collapse navbar button
+
+
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -30,15 +38,27 @@ body {
 }
 
 h1 {
-
-  padding-top: 1rem;
+  font-family: 'Courgette', cursive;
+  padding: 1rem 2rem 0 2rem;
+  font-size: 3rem;
+  margin-bottom: 0;
 }
 
 h2 {
   color: gray;
   font-style: italic;
   font-size: 1.5rem;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem 1rem;
+}
+
+h3 {
+  font-family: 'Amarante', cursive;
+  font-size: 2.25rem;
+}
+
+h4 {
+  color: white;
+  padding-bottom: 0;
 }
 
 hr {
@@ -51,7 +71,7 @@ hr {
 
 header {
   color: white;
-  background-color: rgb(0,0,0,0.8);
+  background-color: rgb(0,0,0,0.7);
 }
 
 footer {
@@ -104,12 +124,12 @@ header, main, footer {
 .synopsis {
   /* left oriented*/
 
-  padding: 0 5% 0 5%;
+  padding: 0 8% 0 8%;
 }
 
 .skills {
   /*right oriented */
-  padding: 0 5% 0 5%;
+  padding: 0 8% 0 8%;
 }
 
 .skills ul {
@@ -139,32 +159,35 @@ header, main, footer {
   border-radius: 50%;
   height: 150px;
   width: 150px;
+  opacity: 80%;
 }
 
 .projects img:hover {
   box-shadow: 0 0 5px 6px white;
+  opacity: 100%;
 }
 
 .projects {
-  padding: 2rem;
+  padding: 0 2rem 1rem;
   text-align: center;
   display: inline-block;
 }
 
 #about section{
   column-count: 3;
+  column-gap: 4rem;
 }
 
 
 .transparent-section {
   color: white;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
 
 }
 
 .solid-section {
-  background-color: rgb(255,165,0,1);
-  color: black;
+  background-color: rgb(255,165,0,0.9);
+  color: #333;
   padding: 1rem 1rem 1rem;
   /* need to fix with absolute positioning, look up Angela course on the colored blocks and how to achieve this arrangement, or perhaps on the tindog exercise? */
 
@@ -184,21 +207,33 @@ header, main, footer {
 
 /* ****RESIZING**** */
 /* FOR TABLET */
-@media (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   #about section{
     column-count: 2;
   }
-
-.synopsis {
-  padding-bottom: 2rem;
-}
 
 }
 
 
 /* FOR PHONE */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  body {
+    font-size: 1.33rem;
+  }
+
   #about section{
     column-count: 1;
   }
@@ -209,6 +244,11 @@ header, main, footer {
 
   .vertical-hr {
     display: none;
+  }
+
+  .small {
+    font-size: 1.2rem;
+    text-align: center;
   }
 
 }
