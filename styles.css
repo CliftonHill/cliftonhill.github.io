@@ -15,6 +15,10 @@ html, body {
   height: 100%;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* TEMPORARY */
 header p {
   position: fixed;
@@ -233,6 +237,7 @@ header, main, footer {
 @media screen and (max-width: 767px) {
   h1 {
     font-size: 3rem;
+    width: 60%;
   }
 
   h2 {
